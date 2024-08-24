@@ -1,0 +1,99 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - start_dass21
+  - dass21_response
+
+responses:
+  utter_greet:
+    - text: "Hello! How are you feeling today?"
+
+  utter_mood_check:  
+    - text: "How are you feeling?"
+
+  utter_happy:
+    - text: "Great! I'm glad you're feeling well."
+
+  utter_cheer_up:
+    - text: "I'm sorry to hear that. Would you like to take a quick assessment to help me understand better?"
+
+  utter_ask_permission:
+    - text: "Would you like to take the DASS-21 questionnaire? It can help us understand your current emotional state."
+
+  utter_goodbye:
+    - text: "Goodbye! Take care."
+
+  utter_dass21_result:
+    - text: "Based on your responses, here are your DASS-21 scores:\n\nDepression: {depression_score}\nAnxiety: {anxiety_score}\nStress: {stress_score}\n\nDepression level: {depression_level}\nAnxiety level: {anxiety_level}\nStress level: {stress_level}"
+
+actions:
+  - utter_greet
+  - utter_mood_check
+  - utter_happy
+  - utter_cheer_up
+  - utter_ask_permission
+  - utter_goodbye
+  - utter_dass21_result
+  - action_start_dass21
+  - action_ask_dass21_question
+  - action_record_dass21_response
+  - action_calculate_dass21_score
+
+slots:
+  current_question:
+    type: float
+    influence_conversation: false
+    mappings:
+    - type: custom
+
+  dass21_responses:
+    type: list
+    influence_conversation: false
+    mappings:
+    - type: custom
+
+  depression_score:
+    type: float
+    influence_conversation: false
+    mappings:
+    - type: custom
+
+  anxiety_score:
+    type: float
+    influence_conversation: false
+    mappings:
+    - type: custom
+
+  stress_score:
+    type: float
+    influence_conversation: false
+    mappings:
+    - type: custom
+
+  depression_level:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
+
+  anxiety_level:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
+
+  stress_level:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

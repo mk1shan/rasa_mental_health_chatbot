@@ -1,0 +1,20 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-response_value",
+      "2": "I-response_value",
+      "3": "L-response_value",
+      "4": "U-response_value",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-response_value": 1,
+      "I-response_value": 2,
+      "L-response_value": 3,
+      "U-response_value": 4,
+      "O": 0
+    },
+    "num_tags": 5
+  }
+]

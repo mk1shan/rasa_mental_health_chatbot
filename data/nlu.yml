@@ -1,0 +1,67 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+
+- intent: mood_check
+  examples: |
+    - How are you feeling today?
+    - How's your mood?
+    - Are you feeling okay?
+
+- intent: mood_sad
+  examples: |
+    - I'm feeling down
+    - I'm sad
+    - Not good
+    - Feeling low
+    - I'm depressed
+    - sad
+    - feeling sad
+    - I feel sad
+
+- intent: mood_happy
+  examples: |
+    - I'm good
+    - I'm feeling great
+    - I'm happy
+    - I feel wonderful
+    - I'm doing well
+
+- intent: affirm
+  examples: |
+    - yes
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+
+- intent: dass21_response
+  examples: |
+    - 0
+    - 1
+    - 2
+    - 3
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you around
+    - see you later
